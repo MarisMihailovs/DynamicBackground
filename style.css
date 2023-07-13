@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+h1 {
+    color: rgba(113, 113, 113, 0.237);
+    margin: auto;
+    text-align: center;
+    transform: translateY(50vh);
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 6rem;
+    user-select: none;
+}
+
+overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    background: linear-gradient(black 45%, transparent);
+}
+
+background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background: black;
+    gap: 2px;
+    z-index: -1;
+}
+
+.box {
+    width: 30px;
+    height: 30px;
+    background: #222;
+    animation: 3s;
+}
+
+.green {
+    animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        background: #222;
+    }
+
+    50% {
+        background: radial-gradient(green, #222);
+    }
+
+    100% {
+        background: #222;
+    }
+}
